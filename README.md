@@ -27,6 +27,9 @@ submitted for inclusion in the work by you, as defined in the Apache-2.0
 license, shall be dual licensed as above, without any additional terms or
 conditions.
 
+The intent of this crate is to be free of soundness bugs. The developers will
+do their best to avoid them, and welcome help in analyzing and fixing them.
+
 [API Docs]: https://michael-f-bryan.github.io/{{project-name}}
 [crev]: https://github.com/crev-dev/cargo-crev
 
