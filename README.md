@@ -17,6 +17,9 @@ This project is licensed under either of
 
 at your option.
 
+It is recommended to always use [cargo-crev][crev] to verify the
+trustworthiness of each of your dependencies, including this one.
+
 ### Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally
@@ -25,3 +28,5 @@ license, shall be dual licensed as above, without any additional terms or
 conditions.
 
 [API Docs]: https://michael-f-bryan.github.io/{{project-name}}
+[crev]: https://github.com/crev-dev/cargo-crev
+
