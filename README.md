@@ -1,7 +1,5 @@
-Mentioned the blog post 
 # {{project-name}}
 
-[![Build Status](https://travis-ci.com/Michael-F-Bryan/{{project-name}}.svg?branch=master)](https://travis-ci.com/Michael-F-Bryan/{{project-name}})
 [![Continuous integration](https://github.com/Michael-F-Bryan/{{project-name}}/workflows/Continuous%20integration/badge.svg?branch=master)](https://github.com/Michael-F-Bryan/{{project-name}}/actions)
 
 ([API Docs])
