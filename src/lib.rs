@@ -1,4 +1,4 @@
 #[test]
 fn it_works() {
-    unimplemented!("TODO: Implement this");
+    assert_eq!(2 + 2, 4);
 }
