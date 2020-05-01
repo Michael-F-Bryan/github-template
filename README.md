@@ -1,6 +1,6 @@
 # {{project-name}}
 
-[![Continuous integration](https://github.com/Michael-F-Bryan/{{project-name}}/workflows/Continuous%20integration/badge.svg?branch=master)](https://github.com/Michael-F-Bryan/{{project-name}}/actions)
+[![pipeline status](https://gitlab.com/Michael-F-Bryan/{{project-name}}/badges/master/pipeline.svg)](https://gitlab.com/Michael-F-Bryan/{{project-name}}/pipelines)
 
 ([API Docs])
 
@@ -30,5 +30,5 @@ conditions.
 The intent of this crate is to be free of soundness bugs. The developers will
 do their best to avoid them, and welcome help in analysing and fixing them.
 
-[API Docs]: https://michael-f-bryan.github.io/{{project-name}}
+[API Docs]: https://michael-f-bryan.gitlab.io/{{project-name}}
 [crev]: https://github.com/crev-dev/cargo-crev
