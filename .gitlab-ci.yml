@@ -1,0 +1,36 @@
+image: "rustlang/rust:nightly-slim"
+variables:
+  CARGO_HOME: $CI_PROJECT_DIR/_cargo
+cache:
+  paths:
+    - $CI_PROJECT_DIR/_cargo
+
+compile-and-test:
+  stage: build
+  before_script:
+    - rustc --version && cargo --version
+  script:
+    - cargo check --verbose
+    - cargo build --verbose
+    - cargo test --verbose
+
+generate-docs:
+  stage: build
+  script:
+    - cargo doc --all --verbose
+    -  - echo '<meta http-equiv="refresh" content="0; url={{crate_name}}/index.html" />' > target/doc/index.html
+  artifacts:
+    paths:
+      - target/doc
+
+pages:
+  stage: deploy
+  dependencies:
+    - generate-docs
+  script:
+    - cp -r target/doc public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
