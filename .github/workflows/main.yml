@@ -18,7 +18,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          # TODO: remove the space between "{ {" 
+          # TODO: remove the space between "{ {"
           toolchain: ${ { matrix.rust }}
           override: true
       - uses: actions-rs/cargo@v1
@@ -46,7 +46,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          # TODO: remove the space between "{ {" 
+          # TODO: remove the space between "{ {"
           toolchain: ${ { matrix.rust }}
           override: true
       - uses: actions-rs/cargo@v1
@@ -62,6 +62,6 @@ jobs:
           build_dir: target/doc
         env:
           # TODO: Create a "public_repo" Personal Access Token
-          # TODO: remove the space between "{ {" 
-          GITHUB_PAT: ${ { secrets.GITHUB_PAT }}
+          # TODO: remove the space between "{ {"
+          GITHUB_PAT: ${ { secrets.GH_PAGES_ACCESS_TOKEN  }}
 
