@@ -61,8 +61,10 @@ jobs:
         with:
           build_dir: target/doc
         env:
-          # TODO: Create a "public_repo" Personal Access Token
-          # https://github.com/settings/tokens/new
+          # TODO: Create a "public_repo" Personal Access Token with the
+          # "public_repo" scope - https://github.com/settings/tokens/new 
+          # TODO: give this repo a new "GH_PAGES_ACCESS_TOKEN" secret 
+          # https://github.com/Michael-F-Bryan/{{project-name}}/settings/secrets
           # TODO: remove the space between "{ {"
           GITHUB_PAT: ${ { secrets.GH_PAGES_ACCESS_TOKEN  }}
 
