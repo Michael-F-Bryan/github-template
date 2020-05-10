@@ -62,6 +62,7 @@ jobs:
           build_dir: target/doc
         env:
           # TODO: Create a "public_repo" Personal Access Token
+          # https://github.com/settings/tokens/new
           # TODO: remove the space between "{ {"
           GITHUB_PAT: ${ { secrets.GH_PAGES_ACCESS_TOKEN  }}
 
