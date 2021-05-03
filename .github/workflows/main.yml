@@ -56,15 +56,9 @@ jobs:
       - name: Redirect top-level GitHub Pages
         run: "echo '<meta http-equiv=\"refresh\" content=\"0; url={{crate_name}}/index.html\" />' > target/doc/index.html"
         shell: bash
-      - name: GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v1
+      - name: Upload API Docs
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        if: github.ref == 'refs/heads/master'
         with:
-          build_dir: target/doc
-        env:
-          # TODO: Create a "public_repo" Personal Access Token with the
-          # "public_repo" scope - https://github.com/settings/tokens/new 
-          # TODO: give this repo a new "GH_PAGES_ACCESS_TOKEN" secret 
-          # https://github.com/Michael-F-Bryan/{{project-name}}/settings/secrets
-          # TODO: remove the space between "{ {"
-          GITHUB_PAT: ${ { secrets.GH_PAGES_ACCESS_TOKEN  }}
-
+          branch: gh-pages
+          folder: target/doc
