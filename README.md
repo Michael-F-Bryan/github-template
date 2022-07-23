@@ -1,8 +1,8 @@
-# Rust Project Template
+# {{project-name}}
 
 [![Continuous integration](https://github.com/Michael-F-Bryan/{{project-name}}/workflows/Continuous%20integration/badge.svg?branch=master)](https://github.com/Michael-F-Bryan/{{project-name}}/actions)
 
-([API Docs])
+([API Docs][api-docs])
 
 > **TODO:** Write up an interesting description.
 
@@ -30,5 +30,5 @@ conditions.
 The intent of this crate is to be free of soundness bugs. The developers will
 do their best to avoid them, and welcome help in analysing and fixing them.
 
-[API Docs]: https://michael-f-bryan.github.io/{{project-name}}
+[api-docs]: https://michael-f-bryan.github.io/{{project-name}}
 [crev]: https://github.com/crev-dev/cargo-crev
