@@ -1,4 +1,4 @@
-# {{project-name}}
+# Rust Project Template
 
 [![Continuous integration](https://github.com/Michael-F-Bryan/{{project-name}}/workflows/Continuous%20integration/badge.svg?branch=master)](https://github.com/Michael-F-Bryan/{{project-name}}/actions)
 
@@ -10,14 +10,14 @@
 
 This project is licensed under either of
 
- * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE.md) or
-   http://www.apache.org/licenses/LICENSE-2.0)
- * MIT license ([LICENSE-MIT](LICENSE-MIT.md) or
-   http://opensource.org/licenses/MIT)
+- Apache License, Version 2.0, ([LICENSE-APACHE](./LICENSE-APACHE.md) or
+  <http://www.apache.org/licenses/LICENSE-2.0>)
+- MIT license ([LICENSE-MIT](./LICENSE-MIT.md) or
+   <http://opensource.org/licenses/MIT>)
 
 at your option.
 
-It is recommended to always use [cargo-crev][crev] to verify the
+It is recommended to always use [`cargo crev`][crev] to verify the
 trustworthiness of each of your dependencies, including this one.
 
 ### Contribution
