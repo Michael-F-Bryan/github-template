@@ -4,8 +4,11 @@ on:
   pull_request:
   push:
     branches:
-    - master
+    - main
 
+env:
+  DEFAULT_CRATE_NAME: {{crate_name}}
+{% raw %}
 jobs:
   check:
     name: Compile and Test
@@ -15,7 +18,7 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-    runs-on: {% raw %}${{ matrix.os }}{% endraw %}
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
       - name: Rust Cache
@@ -113,12 +116,13 @@ jobs:
           command: doc
           args: --workspace --verbose --locked
       - name: Redirect top-level GitHub Pages
-        run: 'echo ''<meta http-equiv="refresh" content="0; url={{crate_name}}/index.html" />'' > target/doc/index.html'
+        run: 'echo ''<meta http-equiv="refresh" content="0; url=${{ env.DEFAULT_CRATE_NAME }}/index.html" />'' > target/doc/index.html'
         shell: bash
       - name: Upload API Docs
         uses: JamesIves/github-pages-deploy-action@4.4.0
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         with:
           branch: gh-pages
           folder: target/doc
           single-commit: true
+{% endraw %}
