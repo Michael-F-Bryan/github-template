@@ -1,6 +1,6 @@
 # {{project-name}}
 
-[![Continuous integration](https://github.com/Michael-F-Bryan/{{project-name}}/workflows/Continuous%20integration/badge.svg?branch=main)](https://github.com/Michael-F-Bryan/{{project-name}}/actions)
+[![Continuous integration](https://github.com/Michael-F-Bryan/{{project-name}}/workflows/Continuous%20Integration/badge.svg?branch=main)](https://github.com/Michael-F-Bryan/{{project-name}}/actions)
 
 ([API Docs][api-docs])
 
