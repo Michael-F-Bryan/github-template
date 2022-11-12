@@ -1,2 +1,13 @@
 [workspace]
 members = ["crates/*"]
+
+[workspace.package]
+authors = ["{{authors}}"]
+edition = "2021"
+homepage = "https://github.com/Michael-F-Bryan/{{project-name}}.git"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/Michael-F-Bryan/{{project-name}}.git"
+# needed for [workspace.package]
+rust-version = "1.64"
+version = "0.1.0"

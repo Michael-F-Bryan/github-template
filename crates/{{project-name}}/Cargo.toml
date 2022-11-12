@@ -1,11 +1,13 @@
 [package]
 name = "{{project-name}}"
-version = "0.1.0"
-authors = ["{{authors}}"]
-license = "MIT OR Apache-2.0"
-repository = "https://github.com/Michael-F-Bryan/{{project-name}}.git"
-edition = "2021"
-rust-version = "1.62.1"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+readme.workspace = true
+repository.workspace = true
+rust.workspace = true
+version.workspace = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
