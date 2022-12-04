@@ -1,0 +1,17 @@
+[placeholders.msrv]
+type = "string"
+prompt = "What is your Minimum Supported Rust Version?"
+default = "1.64.0"
+
+[placeholders.namespace]
+type = "string"
+prompt = "The GitHub repository's namespace"
+default = "Michael-F-Bryan"
+
+[placeholders.xtask]
+type = "bool"
+prompt = "Are you using xtask?"
+default = false
+
+[conditional.'!xtask']
+exclude = ["crates/xtask/", ".cargo/"]

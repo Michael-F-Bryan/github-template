@@ -8,6 +8,7 @@ on:
 
 env:
   DEFAULT_CRATE_NAME: {{crate_name}}
+  MSRV: {{ msrv }}
 {% raw %}
 jobs:
   check:
@@ -21,7 +22,7 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          toolchain: 1.64.0
+          toolchain: ${{ env.MSRV }}
           override: true
       - name: Type Checking
         uses: actions-rs/cargo@v1
