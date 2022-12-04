@@ -1,9 +1,8 @@
 use clap::Parser;
 
 fn main() {
-    let cmd = Cmd::parse();
-
-    todo!("Run {cmd:?}");
+    let _ = Cmd::parse();
+    todo!();
 }
 
 #[derive(Parser, Debug)]
