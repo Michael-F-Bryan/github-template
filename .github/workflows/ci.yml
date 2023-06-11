@@ -9,7 +9,12 @@ on:
 env:
   DEFAULT_CRATE_NAME: {{crate_name}}
   MSRV: {{ msrv }}
+
 {% raw %}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check:
     name: Compile and Test (${{ matrix.os }})
