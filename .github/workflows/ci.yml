@@ -52,6 +52,11 @@ jobs:
         with:
           command: nextest
           args: run --workspace --verbose --locked
+      - name: Doc Tests
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: --doc --workspace --verbose --locked
 
   lints:
     name: Linting and Formatting
