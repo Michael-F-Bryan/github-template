@@ -8,7 +8,6 @@ on:
 
 env:
   DEFAULT_CRATE_NAME: {{crate_name}}
-  MSRV: {{ msrv }}
 
 {% raw %}
 concurrency:
@@ -27,12 +26,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: ${{ env.MSRV }}
-          override: true
+      - name: Setup Rust
+        uses: dsherret/rust-toolchain-file@v1
       - name: Install Nextest
         uses: taiki-e/install-action@nextest
       - name: Rust Cache
@@ -65,11 +60,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Rust Cache
         uses: Swatinem/rust-cache@v2
-      - uses: actions-rs/toolchain@v1
+      - name: Setup Rust
+        uses: dsherret/rust-toolchain-file@v1
         with:
-          profile: minimal
-          toolchain: nightly
-          override: true
           components: rustfmt, clippy
       - name: Check Formatting
         uses: actions-rs/cargo@v1
@@ -89,11 +82,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Rust Cache
         uses: Swatinem/rust-cache@v2
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: nightly
-          override: true
+      - name: Setup Rust
+        uses: dsherret/rust-toolchain-file@v1
       - uses: actions-rs/cargo@v1
         with:
           command: doc
